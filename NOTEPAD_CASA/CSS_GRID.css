@@ -1,0 +1,22 @@
+
+.container{
+		grid-template-columns: 100px 100px 100px; /*Tenho 3 colunas de 100px de largura*/
+		gap: 10px 20px;                           /*Espaçamento de 10 entre linhas e 20 entre colunas*/
+		grid-template-rows: 100px 200px;          /*Primeira coluna terá 100px de altura e a segunda 200*/
+} 
+.container{
+		grid-template-columns: 1fr 2fr;           /*A segunda coluna será o dobro do tamanho da primeira, obedecendo o tamanho do espaço disponível para os items*/
+		grid-template-columns: repeat(3, 1fr);    /*É a mesma coisa de criar 3 colunas com o mesmo tamanho*/
+		grid-template-columns: repeat(2, 100px 200px); /* 2x2 = 4 colunas. A primeira coluna e a terceira serão 100px, segunda e quarta 200px*/
+}
+.code{
+	grid-template-columns: repeat(auto-fill, 200px); /*Não se sabe quantas colunas serão, mas dentro do espaço possível, serão criadas colunas de 200px até completar o espaço disponível*/
+	grid-auto-rows: minmax(50px, 200px)     /*Tamanho mínimo do element 50px, máximo 200*/
+	grid-auto-rows: minmax(50px, auto);     /*Tamanho mínimo 50px. O auto define que o item se expandirá até onde possa comportar todo o seu conteúdo interno*/
+	
+}
+
+
+
+
+
